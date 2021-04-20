@@ -30,4 +30,15 @@ export class WithdrawalComponent implements OnInit {
         },5000)
     }
   }
+
+  /**
+   * @methodName moveToLogin
+   * @param none
+   * @returns none
+   * @desc Used to move to login screen
+   */
+  moveToLogin():void {
+    this.sharedService.atmPIN = null;
+    this.router.navigateByUrl('home');
+  }
 }

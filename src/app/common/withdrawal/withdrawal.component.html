@@ -5,7 +5,7 @@
   </div>
   <input type="text" [(ngModel)]="enteredAmount" placeholder="Enter amount">
   <div class="btn-wrapper">
-    <div class="cancel-btn">
+    <div class="cancel-btn" (click)="moveToLogin()">
       <div class="title">Cancel Transaction</div>
       <div class="subtitle">Cancel this action</div>
     </div>
