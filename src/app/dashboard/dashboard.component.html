@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="dashborad-component" *ngIf="selectedOption!=='Cash Withdrawal'">
+  <h4 class="dashborad-component__title"> Please select below option to continue</h4>
+  <div class="dashborad-component__button-wrapper row">
+    <div class="left-section">
+      <div class="btn-container" *ngFor="let item of DASHBOARD_INFO.leftSection">
+        <div class="image"><img src={{item.img}} /></div>
+        <div class="title">
+          <div>{{item.title}}</div>
+          <div class="subtitle">{{item.subTitle}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="right-section">
+      <div class="btn-container" *ngFor="let item of DASHBOARD_INFO.rightSection" (click)="loadDetailsPage(item.title)">
+        <div class="title">
+          <div>{{item.title}}</div>
+          <div class="subtitle">{{item.subTitle}}</div>
+        </div>
+        <div class="image"><img src={{item.img}} /></div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-withdrawal *ngIf="selectedOption==='Cash Withdrawal'"></app-withdrawal>
+
+
+<!-- The Modal -->
+<div class="modal" *ngIf="showModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="modal-title">Your session will expire in <span class="timer">{{intervalCounter}}</span> </div>
+        <div>Do you want to continue with transaction?</div>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal(true)">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="closeModal(false)">Continue</button>
+      </div>
+
+    </div>
+  </div>
+</div>

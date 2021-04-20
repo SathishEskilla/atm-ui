@@ -1,0 +1,9 @@
+<div class="login-component">
+  <h2>Wel Come to lorem ipsum Bank.</h2>
+  <h4>Please enter 4 digit "ATM" pin using keypad to proceed with transaction.</h4>
+  <h6 routerLink="/home">Click here to goto Home Screen</h6>
+  <div class="pin-wrapper">
+    <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" [config]="ATM_PIN_COMP_CONFIG">
+    </ng-otp-input>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+@import "../../styles/default";
+
+.login-component {
+  background-image: url("/assets/images/background.svg");
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 60px;
+  .pin-wrapper {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    height: inherit;
+  }
+  h2,
+  h4,h6 {
+    font-family: "Time New Roman";
+    font-weight: 500;
+    color: $white;
+    outline: none;
+  }
+  h6{
+    margin-top: 40px;
+    cursor: pointer;
+  }
+}

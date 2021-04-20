@@ -1,0 +1,25 @@
+<div class="row cash-withdrawal-comp" *ngIf="!showSuccessScreen">
+  <div class="title-wrapper">
+    <h3>Please enter the amount to withdraw</h3>
+    <i>(in multiples of 100)</i>
+  </div>
+  <input type="text" [(ngModel)]="enteredAmount" placeholder="Enter amount">
+  <div class="btn-wrapper">
+    <div class="cancel-btn">
+      <div class="title">Cancel Transaction</div>
+      <div class="subtitle">Cancel this action</div>
+    </div>
+    <div class="confirm-btn" (click)="validateAmount()">
+      <img src="/assets/images/check.svg">
+      <div>
+        <div class="title">Withdraw Funds</div>
+        <div class="subtitle">Withdraw the cash amount entered</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row cash-withdrawal-comp" *ngIf="showSuccessScreen">
+  <h3 class="success-title">Please collect your cash and card.</h3>
+    <img src="/assets/images/success.jpeg">
+</div>

@@ -1,0 +1,20 @@
+<div class="row home-component" (click)="moveToLogin()">
+  <div class=" home-component__logo">
+    <img src='/assets/images/logo.svg' />
+  </div>
+  <div class="col-md-6 home-component__left-section">
+    <div *ngFor="let item of LEFT_SECTION_LIST" class="home-component__left-section__wrapper">
+      <div class="image"><img src={{item.img}} /></div>
+      <div class="title">{{item.title}}</div>
+    </div>
+  </div>
+  <div class="col-md-6 home-component__right_section">
+    <div class="home-component__right_section">
+      <div class="home-component__right_section__title">
+        <h1>{{greetingMessage}} !</h1>
+        <h2> Wel come to lorem ipsum Bank !!</h2>
+        <p><strong>Note</strong> : Please click on the screen to proceed with transcton.</p>
+      </div>
+    </div>
+  </div>
+</div>

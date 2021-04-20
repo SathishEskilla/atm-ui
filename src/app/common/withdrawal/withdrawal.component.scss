@@ -1,0 +1,106 @@
+@import "../../../styles/default";
+
+.cash-withdrawal-comp {
+  background-image: url("/assets/images/background.svg");
+  background-position: center;
+  height: calc(100vh - 72px);
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  input {
+    background-color: transparent;
+    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    color: $white;
+    font-size: 80px;
+    outline: none;
+    text-align: center;
+    &::placeholder {
+      color: $white;
+      opacity: 1;
+      font-size: 80px;
+    }
+  }
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 60px;
+    text-transform: uppercase;
+    color: $white;
+    font-family: "Time New Roman";
+    font-weight: 500;
+    position: absolute;
+    top: 60px;
+  }
+  .btn-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .title,
+    .subtitle {
+      text-transform: uppercase;
+      color: $white;
+      font-family: "Time New Roman";
+      font-weight: 500;
+      font-size: 20px;
+      width: 100%;
+    }
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.7;
+      text-transform: inherit;
+    }
+    .confirm-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      text-align: left;
+      padding-left: 16px;
+      align-items: center;
+      cursor: pointer;
+      background: linear-gradient(
+        90deg,
+        rgb(68, 182, 234) 0%,
+        rgba(72, 170, 215, 0.5) 100%
+      );
+      box-shadow: -4px 12px 32px 0px rgba(0, 0, 0, 0.04);
+      height: 97px;
+      width: 350px;
+      img {
+        width: 42px;
+        height: 42px;
+        margin-right: 10px;
+      }
+    }
+    .cancel-btn {
+      padding-right: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: right;
+      cursor: pointer;
+      background: linear-gradient(
+        90deg,
+        rgb(68, 182, 234) 0%,
+        rgba(72, 170, 215, 0.5) 100%
+      );
+      box-shadow: 4px 12px 32px 0px rgba(0, 0, 0, 0.04);
+      height: 97px;
+      width: 350px;
+    }
+  }
+  .success-title {
+    text-transform: uppercase;
+    color: $white;
+    font-family: "Time New Roman";
+    font-weight: 500;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}

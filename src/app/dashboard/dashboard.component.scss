@@ -1,0 +1,118 @@
+@import "../../styles/default";
+
+.dashborad-component {
+  background-image: url("/assets/images/background.svg");
+  background-position: center;
+  height: calc(100vh - 72px);
+  overflow: hidden;
+  &__title {
+    text-transform: uppercase;
+    color: $white;
+    font-family: "Time New Roman";
+    font-weight: 500;
+    padding: 40px;
+  }
+  &__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    .left-section,
+    .right-section {
+      .btn-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      .image {
+        height: 50px;
+        width: 120px;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .title {
+        text-transform: uppercase;
+        color: $white;
+        font-family: "Time New Roman";
+        font-weight: 500;
+        width: calc(100% - 120px);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 20px;
+      }
+    }
+    .right-section {
+      .btn-container {
+        background: linear-gradient(
+          90deg,
+          rgb(68, 182, 234) 0%,
+          rgba(72, 170, 215, 0.5) 100%
+        );
+        border-radius: 8px 0px 0px 8px;
+        box-shadow: -4px 12px 32px 0px rgba(0, 0, 0, 0.04);
+        height: 97px;
+        width: 437px;
+        .title {
+          padding-left: 16px;
+          text-align: left;
+          div {
+            width: 100%;
+          }
+          .subtitle {
+            font-size: 12px;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    .left-section {
+      .btn-container {
+        background: linear-gradient(
+          90deg,
+          rgb(68, 182, 234) 0%,
+          rgba(72, 170, 215, 0.5) 100%
+        );
+        border-radius: 0px 8px 8px 0px;
+        box-shadow: 4px 12px 32px 0px rgba(0, 0, 0, 0.04);
+        height: 97px;
+        width: 437px;
+        .title {
+          padding-right: 16px;
+          text-align: right;
+          div {
+            width: 100%;
+          }
+          .subtitle {
+            font-size: 12px;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}
+.modal {
+  display: block;
+  .modal-dialog{
+    width: 350px;
+    font-family: "Time New Roman";
+    .modal-footer{
+      justify-content: space-between;
+      .btn{
+        width: 120px
+      }
+    }
+    .timer{
+      padding: 3px 8px;
+      background-color: $snow-light-white;
+      color: $solid-blue;
+      font-weight: 600;
+    }
+    .modal-title{
+      margin-bottom: 16px;
+    }
+  }
+}

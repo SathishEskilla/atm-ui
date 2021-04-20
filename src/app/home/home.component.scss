@@ -1,0 +1,73 @@
+@import "../../styles/default";
+
+.home-component {
+  cursor: pointer;
+  padding: 16px;
+  @include respond-to(screen-m-min) {
+    padding: 0 0 0 32px;
+  }
+  @include respond-to(screen-l-min) {
+    padding: 0 0 0 60px;
+  }
+  @include respond-to(screen-xl-min) {
+    padding: 0 0 0 144px;
+  }
+  &__logo {
+    width: 55%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(254, 254, 254, 0.9);
+    box-shadow: inset 0px -1px 0px 0px $snow-white;
+    padding: 0 20px;
+    img {
+      width: 200px;
+      height: 100%;
+    }
+  }
+  &__left-section {
+    margin-top: 100px;
+    padding-right: 0;
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      .image {
+        height: 80px;
+        width: 120px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $snow-white;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .title {
+        text-transform: uppercase;
+        color: $solid-blue;
+        font-family: "Time New Roman";
+        font-weight: 500;
+        padding-bottom: 20px;
+        padding: 0 20px 20px 10px;
+        border-bottom: 1px solid $light-grey;
+        height: 80px;
+        width: calc(100% - 120px);
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &__right_section {
+    padding-right: 0;
+    background-image: url("/assets/images/insert-card.svg");
+    background-position: center;
+    height: 100vh;
+    &__title {
+      font-family: "Time New Roman";
+      font-weight: 500;
+      color: $white;
+      padding: 32px 20px 20px 32px;
+    }
+  }
+}

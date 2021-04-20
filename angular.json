@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "atm-code"
+    }
+  },
+  "defaultProject": "atm-code",
+  "cli": {
+    "analytics": "5c991170-05d8-4c51-ad24-7eca0749bdf1"
+  }
 }
